@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Little Universe</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffe6f0, #e6f0ff);
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    padding: 60px 20px;
+    color: #444;
+}
+
+header h1 {
+    font-size: 2.5em;
+}
+
+.btn {
+    padding: 12px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background: #ff9acb;
+    color: white;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: #ff6fa8;
+}
+
+.section {
+    display: none;
+    padding: 20px;
+    text-align: center;
+    animation: fade 0.8s ease-in;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 15px auto;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2em;
+    color: #555;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Our Little Universe 🌙</h1>
+    <p>A place made of memories, not time</p>
+
+    <button class="btn" onclick="showSection('memories')">Memories</button>
+    <button class="btn" onclick="showSection('moments')">Moments</button>
+    <button class="btn" onclick="showSection('message')">Final Note</button>
+</header>
+
+<!-- MEMORIES -->
+<div id="memories" class="section">
+
+    <div class="card">
+        <h2>First Touch 🌊</h2>
+        <p>Cuatro Ciénegas water — you holding me so I wouldn’t drown.</p>
+        <img src="img1.jpeg">
+    </div>
+
+    <div class="card">
+        <h2>New Year Balcony 🤍</h2>
+        <p>Our first hug under the night sky.</p>
+        <img src="img2.jpeg">
+    </div>
+
+    <div class="card">
+        <h2>First Kiss 🌸</h2>
+        <p>Tucson — when everything paused for a moment.</p>
+        <img src="img3.jpeg">
+    </div>
+
+    <div class="card">
+        <h2>Sedona + Grand Canyon 🚗</h2>
+        <p>Our road trip where everything felt like home.</p>
+        <img src="img4.jpeg">
+    </div>
+
+</div>
+
+<!-- MOMENTS (you can add images here now too) -->
+<div id="moments" class="section">
+
+    <div class="card">
+        <h2>Rasam on the Hike 🍲</h2>
+        <p>You brought it when I was sick — that care stayed more than anything.</p>
+	<img src="img5.jpeg">
+    </div>
+
+    <div class="card">
+        <h2>Valentine Chaos 🍕</h2>
+        <p>No bottle opener, just us figuring life out together.</p>
+	<img src="img6.jpeg">
+    </div>
+
+    <div class="card">
+        <h2>The Shirt 🖤</h2>
+        <p>You left it behind… I still sleep in it.</p>
+	<img src="img7.jpeg">
+    </div>
+
+    <div class="card">
+        <h2>Paper Ring 💍</h2>
+        <p>You kept it like it mattered more than paper.</p>
+	<img src="img8.jpeg">
+    </div>
+
+    <div class="card">
+        <h2>Subaru 🚙</h2>
+        <p>Our first road trip car — felt like home.</p>
+	<img src="img9.jpeg">
+    </div>
+
+    <div class="card">
+        <h2>Ludo Nights 🎲</h2>
+        <p>You always “won”… or maybe the game was just on your side 😄</p>
+	<img src="img10.jpeg">
+    </div>
+
+</div>
+
+<!-- FINAL MESSAGE -->
+<div id="message" class="section">
+
+    <div class="card">
+        <h2>Final Note 💌</h2>
+        <p>
+            Once your rasam comforted me on a day I needed it most…<br><br>
+
+            I hope this little space comforts you in return.<br><br>
+
+        </p>
+    </div>
+
+</div>
+
+<footer>
+    Made with memories, not code ❤️
+</footer>
+
+<script>
+function showSection(id){
+    document.querySelectorAll('.section').forEach(sec => {
+        sec.style.display = "none";
+    });
+    document.getElementById(id).style.display = "block";
+}
+</script>
+
+</body>
+</html>
